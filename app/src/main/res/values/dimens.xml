@@ -1,0 +1,64 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+
+    <dimen name="padding_small">5dp</dimen>
+    <dimen name="padding_middling">7.5dp</dimen>
+    <dimen name="padding_large">10dp</dimen>
+    <dimen name="padding_xlarge">15dp</dimen>
+    <dimen name="reg_nurse_image_size">48dp</dimen>
+    <dimen name="header_height">48dp</dimen>
+    <dimen name="header_item_width">48dp</dimen>
+    <dimen name="header_item_height">36dp</dimen>
+
+
+
+    <dimen name="list_item_min_height">48dp</dimen>
+    <dimen name="list_item_min_height_small">32dp</dimen>
+    <dimen name="list_item_text_width">72dp</dimen>
+    <dimen name="list_item_text_width_small">48dp</dimen>
+    <dimen name="list_item_multi_line_height">72dp</dimen>
+    <dimen name="font_size_small">12dp</dimen>
+    <dimen name="font_size_normal">14dp</dimen>
+    <dimen name="font_size_large">16dp</dimen>
+    <dimen name="font_size_xlarge">18dp</dimen>
+    <dimen name="font_size_xxlarge">20dp</dimen>
+    <dimen name="font_size_big">24dp</dimen>
+    <dimen name="padding_1dp">1dp</dimen>
+    <dimen name="padding_2dp">2dp</dimen>
+    <dimen name="padding_4dp">4dp</dimen>
+    <dimen name="padding_6dp">6dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="padding_10dp">10dp</dimen>
+    <dimen name="padding_12dp">12dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="padding_20dp">20dp</dimen>
+    <dimen name="padding_24dp">24dp</dimen>
+
+
+    <!--BottomNavigationBar 文字和图片之间的间距-->
+    <dimen name="fixed_height_bottom_padding">6dp</dimen>
+    <dimen name="fixed_icon_badge_grid_height">34dp
+    </dimen>
+    <dimen name="fixed_icon_badge_grid_width">34dp
+    </dimen>
+    <dimen name="fixed_icon_grid">22dp</dimen>
+    <dimen name="bottom_navigation_elevation">8dp</dimen>
+    <dimen name="shifting_label">16sp</dimen>
+    <dimen name="fixed_label_active">14sp</dimen>
+    <dimen name="fixed_label_inactive">12sp</dimen>
+    <dimen name="padding_xxlarge">20dp</dimen>
+    <dimen name="font_10dp">10dp</dimen>
+    <dimen name="font_12dp">12dp</dimen>
+    <dimen name="font_14dp">14dp</dimen>
+    <dimen name="font_16dp">16dp</dimen>
+    <dimen name="font_18dp">18dp</dimen>
+    <dimen name="font_20dp">20dp</dimen>
+    <dimen name="font_22dp">22dp</dimen>
+    <dimen name="font_24dp">24dp</dimen>
+
+
+
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_bar"
+        layout="@layout/layout_title" />
+
+
+    <RelativeLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#fff">
+
+
+        <RadioGroup
+            android:id="@+id/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/navHome"
+                style="@style/NavBarItem"
+                android:background="@drawable/radio_group_selector"
+                android:gravity="center"
+                android:text="发布信息数据统计"
+                android:textColor="@drawable/color_radiobutton" />
+
+
+            <RadioButton
+                android:id="@+id/navCar"
+                style="@style/NavBarItem"
+                android:background="@drawable/radio_group_selector1"
+                android:gravity="center"
+                android:text="网上e支部数据统计"
+                android:textColor="@drawable/color_radiobutton" />
+
+
+        </RadioGroup>
+
+
+    </RelativeLayout>
+
+
+    <com.admin.huangchuan.View.FragmentViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout" />
+
+
+</LinearLayout>

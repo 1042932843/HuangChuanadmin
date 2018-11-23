@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/txt_left"
+            style="@style/txt_titleStyle1"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/app_name"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <!--<ImageView
+            android:id="@+id/img_back"
+            android:background="@drawable/icon_title_onclick"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_centerVertical="true"
+           android:contentDescription="@string/app_name"
+           android:src="@mipmap/ic_action_back" />-->
+
+        <ImageView
+            android:id="@+id/dl"
+            style="@style/HeaderBack1"
+            android:layout_centerVertical="true" />
+
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/txt_titleStyle1"
+            android:layout_centerInParent="true"
+            android:text="" />
+
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_action_add"
+            android:contentDescription="@string/app_name"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_right"
+            style="@style/txt_titleStyle1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/rule_line_tv"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/homepage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/listItemPressed"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/uese_rela"
+                    style="@style/HomeRelativeLayout1"
+                    android:layout_marginLeft="1px"
+                    android:layout_marginRight="1px">
+
+                    <ImageView
+                        android:id="@+id/yhgl_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/yhgl" />
+
+                    <TextView
+                        android:id="@+id/yhgl"
+                        style="@style/HomeTextItem1"
+                        android:layout_below="@+id/yhgl_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="用户管理" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="1px"
+                    android:id="@+id/xw_rela"
+                    style="@style/HomeRelativeLayout1">
+
+                    <ImageView
+                        android:id="@+id/xwxxgl_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/xwxxgl" />
+
+                    <TextView
+                        style="@style/HomeTextItem1"
+                        android:layout_below="@+id/xwxxgl_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="新闻信息管理" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_marginTop="1px"
+                    android:id="@+id/ddb_rela"
+                    style="@style/HomeRelativeLayout1"
+                    android:layout_marginLeft="1px"
+                    android:layout_marginRight="1px">
+
+                    <ImageView
+                        android:id="@+id/ddbgzs_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/ddbgzs" />
+
+                    <TextView
+                        android:id="@+id/ddbgzs"
+                        style="@style/HomeTextItem1"
+                        android:layout_below="@+id/ddbgzs_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="党代表工作室管理" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/ztz_rela"
+                    style="@style/HomeRelativeLayout1">
+
+                    <ImageView
+                        android:id="@+id/zyzhd_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/zyzhd" />
+
+                    <TextView
+                        style="@style/HomeTextItem1"
+                        android:layout_below="@+id/zyzhd_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="志愿者活动管理" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_marginTop="1px"
+                    android:id="@+id/zzxf_rela"
+                    style="@style/HomeRelativeLayout1"
+                    android:layout_marginLeft="1px"
+                    android:layout_marginRight="1px">
+
+                    <ImageView
+                        android:id="@+id/zzxf_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/zzxf" />
+
+                    <TextView
+                        android:id="@+id/zzxf"
+                        style="@style/HomeTextItem1"
+                        android:layout_below="@+id/zzxf_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="组织信访管理" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_marginTop="1px"
+                    android:id="@+id/xx_rela"
+                    style="@style/HomeRelativeLayout1">
+
+                    <ImageView
+                        android:id="@+id/xxtj_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/xxtj" />
+
+                    <TextView
+                        android:id="@+id/xxtj"
+                        style="@style/HomeTextItem1"
+                        android:layout_below="@+id/xxtj_img"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="信息统计" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/tuichu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_background"
+        android:text="退出"
+        android:textColor="#fff"
+        android:visibility="gone" />
+</LinearLayout>

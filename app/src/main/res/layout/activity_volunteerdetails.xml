@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/layout_img"
+        layout="@layout/image_layout1" />
+
+
+    <include
+        android:id="@+id/layout_bar"
+        layout="@layout/layout_title" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rela"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:minHeight="50dp">
+
+                <TextView
+                    android:id="@+id/text_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="活动标题："
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/text_1"
+                    android:background="@null"
+                    android:hint="请输入活动标题"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <View style="@style/Divider.Vertical" />
+
+            <RelativeLayout
+                style="@style/ListItem"
+                android:layout_height="48dp"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/rel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="开始时间："
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/beginDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/rel"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/info"-->
+                <!--style="@style/ListItemText.Full"/>-->
+
+                <ImageView
+                    android:id="@+id/img2"
+                    style="@style/ListItemAction"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+            <View style="@style/Divider.Vertical" />
+
+
+            <RelativeLayout
+                style="@style/ListItem"
+                android:layout_height="48dp"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/rel1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="结束时间："
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/endDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/rel1"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/info"-->
+                <!--style="@style/ListItemText.Full"/>-->
+
+                <ImageView
+                    android:id="@+id/img1"
+                    style="@style/ListItemAction"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical" />
+            </RelativeLayout>
+
+
+            <View style="@style/Divider.Vertical" />
+
+
+            <RelativeLayout
+                style="@style/ListItem"
+                android:layout_height="60dp">
+
+                <RelativeLayout
+                    android:id="@+id/rel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <!--   <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:background="@drawable/ic_launcher" />-->
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/rel2"
+                    android:gravity="center_vertical"
+                    android:text="介绍图片"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="80dp"
+                    android:choiceMode="singleChoice"
+                    android:divider="@null"
+                    android:fadingEdge="none"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbarStyle="outsideOverlay"
+                    app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    app:spanCount="1"
+                    tools:listitem="@layout/item_image" />
+
+                <Button
+                    android:id="@+id/xuanze"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_background"
+                    android:gravity="center"
+                    android:text="选择"
+                    android:textColor="#fff"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <View style="@style/Divider.Vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rela"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:minHeight="50dp">
+
+                <TextView
+                    android:id="@+id/text_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="发  布  者："
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/text_2"
+                    android:background="@null"
+                    android:hint="请输入发布者"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <View style="@style/Divider.Vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:minHeight="50dp">
+
+                <TextView
+                    android:id="@+id/text_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="活动地址："
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/text_3"
+                    android:background="@null"
+                    android:hint="请输入活动地址"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+
+            <View style="@style/Divider.Vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:minHeight="50dp">
+
+                <TextView
+                    android:id="@+id/text_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="活动介绍："
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+
+                <EditText
+                    android:id="@+id/introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/text_4"
+                    android:background="@null"
+                    android:hint="请输入活动介绍"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+
+            </RelativeLayout>
+
+            <View style="@style/Divider.Vertical" />
+
+
+            <RelativeLayout
+                android:id="@+id/rela_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:minHeight="50dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="活动结果："
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+
+                <EditText
+                    android:id="@+id/result"
+                    android:maxLength="200"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/text_5"
+                    android:background="@null"
+                    android:hint="请输入活动结果"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/qyeding"
+                    style="@style/Button"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/padding_xlarge"
+                    android:layout_weight="1"
+                    android:text="确定" />
+
+                <Button
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/complain"
+                    style="@style/Button"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/padding_xlarge"
+                    android:layout_weight="1"
+                    android:text="报名"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/zyz"
+                    style="@style/Button"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="@dimen/padding_xlarge"
+                    android:layout_weight="1"
+                    android:text="志愿者"
+                    android:visibility="gone" />
+
+                <Button
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="5dp"
+                    android:id="@+id/shanchu_1"
+                    style="@style/Button"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/padding_xlarge"
+                    android:layout_weight="1"
+                    android:text="删除" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

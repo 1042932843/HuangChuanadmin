@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary" >
+
+        <TextView
+            android:id="@+id/txt_left"
+            style="@style/txt_titleStyle1"
+            android:textSize="15sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/app_name"
+            android:visibility="gone"/>
+
+        <!--<ImageView
+            android:id="@+id/img_back"
+            android:background="@drawable/icon_title_onclick"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:layout_centerVertical="true"
+           android:contentDescription="@string/app_name"
+           android:src="@mipmap/ic_action_back" />-->
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/img_back"
+            style="@style/HeaderBack"/>
+
+
+
+        <TextView
+            android:id="@+id/txt_title"
+            style="@style/txt_titleStyle1"
+            android:text=""
+            android:layout_centerInParent="true"  />
+
+        <ImageView
+            android:id="@+id/imgright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/ic_action_add"
+            />
+
+        <TextView
+            android:id="@+id/txt_right"
+            style="@style/txt_titleStyle1"
+            android:textSize="16sp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"  />
+
+    </RelativeLayout>
+
+
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/sousuo" />
+
+        <EditText
+            android:id="@+id/search_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:hint="姓名"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textSize="15dp"
+
+            />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_background"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/sousuo" />
+
+        <EditText
+            android:id="@+id/search_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            android:hint="手机号码"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:textSize="15dp"
+            />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/determine"
+        android:textSize="14dp"
+        style="@style/Button"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:text="确定" />
+
+
+</LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rela"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/submit"
+        android:layout_below="@+id/header">
+
+        <com.admin.huangchuan.View.PullToRefreshLayout
+            android:id="@+id/pull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <com.admin.huangchuan.View.SwipeMenu.SwipeMenuListView
+                android:id="@+id/list"
+                style="@style/ListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:childDivider="#00000000"
+                android:childIndicator="@null"
+                android:divider="#00000000"
+                android:dividerHeight="0dp"
+                android:groupIndicator="@null" />
+
+        </com.admin.huangchuan.View.PullToRefreshLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

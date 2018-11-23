@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_bar"
+        layout="@layout/layout_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <RelativeLayout
+                style="@style/ListItem"
+                android:layout_height="60dp">
+
+                <RelativeLayout
+                    android:id="@+id/rel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <!--   <ImageView
+                           android:layout_width="25dp"
+                           android:layout_height="25dp"
+                           android:background="@drawable/ic_launcher" />-->
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/rel2"
+                    android:gravity="center_vertical"
+                    android:text="头像"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="80dp"
+                    android:choiceMode="singleChoice"
+                    android:divider="@null"
+                    android:fadingEdge="none"
+                    android:listSelector="@android:color/transparent"
+                    android:scrollbarStyle="outsideOverlay"
+                    app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                    app:spanCount="1"
+                    tools:listitem="@layout/item_image" />
+
+                <Button
+                    android:id="@+id/xuanze"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/button_background"
+                    android:gravity="center"
+                    android:text="选择"
+                    android:textColor="#fff"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+            <View style="@style/Divider.Vertical" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rela"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:minHeight="50dp">
+
+                <TextView
+                    android:id="@+id/text_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="真实姓名："
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/realName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/text_1"
+                    android:background="@null"
+                    android:hint="请输入真实姓名"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+
+            <View style="@style/Divider.Vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rela"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:minHeight="50dp">
+
+                <TextView
+                    android:id="@+id/text_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="身份证号："
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/idcard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/text_2"
+                    android:background="@null"
+                    android:hint="请输入身份证号"
+                    android:textColor="#000"
+                    android:digits="0123456789xX"
+                    android:maxLength="18"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <View style="@style/Divider.Vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="8dp"
+                    android:background="@null"
+                    android:text="性别："
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+
+                <RadioGroup
+                    android:id="@+id/navBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="28dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/nan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/navbar_item_boy_icon"
+                        android:text="男"
+                        android:textColor="@drawable/color_radiobutton1"
+                        android:textSize="14dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/nv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/navbar_item_girl_icon"
+                        android:text="女"
+                        android:textColor="@drawable/color_radiobutton1"
+                        android:textSize="14dp" />
+
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+            <View style="@style/Divider.Vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rela"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:minHeight="50dp">
+
+                <TextView
+                    android:id="@+id/text_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="手机号："
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="22dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/text_5"
+                    android:background="@null"
+                    android:hint="请输入手机号"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+
+            <View style="@style/Divider.Vertical" />
+
+
+            <RelativeLayout
+                style="@style/ListItem"
+                android:layout_height="48dp"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/rel1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:text="入党时间："
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/joinPartyDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/rel1"
+                    android:gravity="center_vertical"
+                    android:hint="请选择入党时间"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <!--<TextView-->
+                <!--android:id="@+id/info"-->
+                <!--style="@style/ListItemText.Full"/>-->
+
+                <ImageView
+                    android:id="@+id/img1"
+                    style="@style/ListItemAction"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+            <View style="@style/Divider.Vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rela"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:minHeight="50dp">
+
+                <TextView
+                    android:id="@+id/text_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="所在支部："
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/areaName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/text_3"
+                    android:background="@null"
+                    android:hint="请选择所在支部"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+
+            <View style="@style/Divider.Vertical" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rela"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:minHeight="50dp">
+
+                <TextView
+                    android:id="@+id/text_10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="职位："
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/position"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@+id/text_10"
+                    android:background="@null"
+                    android:hint="请输入职位"
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <View style="@style/Divider.Vertical" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@null"
+                    android:text="是否第一书记："
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+
+                <RadioGroup
+                    android:id="@+id/roder_depat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/cdno"
+                        style="@style/CustomCheckboxTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="否"
+                        android:textColor="@drawable/color_radiobutton1"
+                        android:textSize="15dp" />
+
+
+                    <RadioButton
+                        android:id="@+id/cd_yes"
+                        style="@style/CustomCheckboxTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:checked="false"
+                        android:paddingRight="5dp"
+                        android:text="是"
+                        android:textColor="@drawable/color_radiobutton1"
+                        android:textSize="15dp" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/Qd"
+                    style="@style/Button"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/padding_xlarge"
+                    android:layout_weight="1"
+                    android:text="确定" />
+
+                <Button
+                    android:id="@+id/czmm"
+                    style="@style/Button"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/padding_xlarge"
+                    android:layout_weight="1"
+                    android:text="重置密码"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/shanchu"
+                    style="@style/Button"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/padding_xlarge"
+                    android:layout_weight="1"
+                    android:text="删除"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

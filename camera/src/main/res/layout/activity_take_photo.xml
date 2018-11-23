@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.awen.camera.widget.CameraSurfaceView
+        android:id="@+id/cameraSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.awen.camera.widget.CameraFocusView
+        android:id="@+id/cameraFocusView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <!-- 顶部按钮-->
+    <include layout="@layout/layout_shoot_title" />
+
+    <RelativeLayout
+        android:id="@+id/cameraBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:animateLayoutChanges="true"
+        android:layout_gravity="bottom"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/cancelBtn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="18sp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="65dp"
+            android:background="@drawable/icon_back" />
+
+
+        <!-- 关闭按钮-->
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_00"
+            android:src="@drawable/button_icon_photo_close" />
+
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/caidan"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/icon_tz" />
+
+        <ImageView
+            android:id="@+id/takePhotoBtn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_shape_camera" />
+
+        <ImageView
+            android:id="@+id/okBtn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:layout_marginRight="65dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/icon_confirm" />
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">潢川红云管理端</string>
+    <string name="txt_not_out_5000words">不能超过5000字</string>
+    <string name="txt_click_btn_add_link">点击添加链接</string>
+    <string name="txt_edit_content">编辑内容</string>
+    <string name="link_address">链接地址</string>
+    <string name="link_add">添加链接</string>
+    <string name="link_address_hint">http://</string>
+    <string name="link_desc">链接描述</string>
+    <string name="link_desc_hint">连接标题</string>
+    <string name="link_ok">确定</string>
+    <string name="link_copyright">请勿发布非法链接，后果自负</string>
+    <string name="link_dont_null">链接不能为空</string>
+    <string name="rich_click_add_txt">点击添加文字内容</string>
+    <string name="title_edit_title">编辑标题</string>
+    <string name="title_dont_null">标题不能为空</string>
+    <string name="pick_name">上传</string>
+    <string name="add_link">添加链接</string>
+    <string name="pic_out_of_size">图片大小超过限制！</string>
+
+    <string name="action_ot_reference">语法参考?</string>
+    <string name="action_ot_preview">预览</string>
+    <string name="action_ot_edit">编辑</string>
+    <string name="action_ot_save">保存</string>
+
+    <string name="edit_img">图片</string>
+    <string name="format_bold">加粗</string>
+    <string name="format_italic">斜体</string>
+    <string name="format_header_1">一级标题</string>
+    <string name="format_header_2">二级标题</string>
+    <string name="format_header_3">三级标题</string>
+    <string name="format_header_4">四级标题</string>
+    <string name="format_header_5">五级标题</string>
+    <string name="format_quote">文字引用</string>
+    <string name="format_strike">删除线</string>
+    <string name="undo">撤销</string>
+    <string name="ot_time">当前时间</string>
+    <string name="redo">前进</string>
+    <string name="link">链接</string>
+    <string name="list">无序列表</string>
+
+    <string name="sd_fail">获取SD卡读写权限失败</string>
+
+    <string name="editTextTip">开始你的记录..</string>
+    <string name="editTitleTip">标题</string>
+
+    <string name="ot_tip">提示</string>
+    <string name="ot_tip_preview">左滑可以快速返回到编辑界面。</string>
+    <string name="ot_tip_i_know">我知道了</string>
+</resources>

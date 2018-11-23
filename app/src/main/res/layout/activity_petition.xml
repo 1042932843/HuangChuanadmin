@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_bar"
+        layout="@layout/layout_title" />
+
+    <RelativeLayout
+        android:id="@+id/rela"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/submit"
+        android:layout_below="@+id/header">
+
+        <com.admin.huangchuan.View.PullToRefreshLayout
+            android:id="@+id/pull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <com.admin.huangchuan.View.SwipeMenu.SwipeMenuListView
+                android:id="@+id/list"
+                style="@style/ListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:childDivider="#00000000"
+                android:childIndicator="@null"
+                android:divider="#00000000"
+                android:dividerHeight="0dp"
+                android:groupIndicator="@null" />
+
+        </com.admin.huangchuan.View.PullToRefreshLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

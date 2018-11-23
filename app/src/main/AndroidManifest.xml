@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.admin.huangchuan">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- 存储读取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <!-- 蒲公英 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取网络状态  蒲公英 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 网络通信 蒲公英 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 获取设备信息  蒲公英 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取MAC地址 蒲公英 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 读写sdcard，storage等等 蒲公英 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 允许程序录制音频 蒲公英 -->
+
+
+    <!-- 可选 获取logcat日志 蒲公英 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+
+
+
+    <application
+        android:name="com.admin.huangchuan.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.PetitionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name=".activity.PetitionDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".activity.PartyDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <service android:name=".Service.service" />
+
+        <activity
+            android:name=".fragment.PartyRepresentativeFragment"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".fragment.InformationStatisticsFragment"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.VolunteerActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.VolunteerDetailsListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity.ImageActivity"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity.JournalismActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.UserManagementActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".activity.UserDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".activity.AreaNameActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name=".activity.TXTEditorActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".activity.LinkedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name=".activity.VolunteerDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.JournalismDetailsActivity"
+            android:configChanges="keyboard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+
+
+        <activity
+            android:name=".activity.EditorActivity" />
+
+        <activity
+            android:name=".activity.Main1Activity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.EditorActivity1"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name=".activity.NewsListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+
+        <activity
+            android:name="me.nereo.multi_image_selector.MultiImageSelectorActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/FullScreen" />
+
+
+        <activity
+            android:name="com.edmodo.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen" />
+
+
+        <!-- 蒲公英 -->
+        <activity android:name="com.pgyersdk.activity.FeedbackActivity" />
+
+        <!-- 蒲公英 -->
+        <!-- 测试的蒲公号 -->
+        <!--<meta-data-->
+        <!--android:name="PGYER_APPID"-->
+        <!--android:value="ba1e82a3446e0f4016cbf18cec7fbaf5" />-->
+
+
+        <!-- 71蒲公英 -->
+        <!-- 给客户的蒲公英版本号 -->
+        <!-- <meta-data
+             android:name="PGYER_APPID"
+             android:value=""/>
+ -->
+        <meta-data
+            android:name="PGYER_APPID"
+            android:value="0455d6f75644e726f782ed8c0edee8b7" />
+
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2015 珠海云集软件科技有限公司.
+  ~ Website：http://www.YunJi123.com
+  ~ Mail：dev@yunji123.com
+  ~ Tel：+86-0756-8605060
+  ~ QQ：340022641(dove)
+  ~ Author：dove
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="#ff000000"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/cmp_customer_actionbar"/>
+
+    <com.edmodo.cropper.CropImageView
+            android:id="@+id/cropImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#D33D3C</color>
+    <color name="transparent">#00000000</color><!--透明 -->
+    <color name="zhuti">#EEEEEE</color>
+    <color name="main_color">@color/colorPrimary</color>
+    <color name="translucence">#80000000</color>
+    <color name="windowBackground">#2B96FA</color>
+    <color name="white">#ffffff</color>
+    <color name="listItemPressed">#ffdedede</color>
+    <drawable name="gray">#ffcccccc</drawable>
+    <drawable name="white">#ffffffff</drawable>
+    <drawable name="divider">#ffcccccc</drawable>
+
+    <color name="hei">#000</color>
+
+    <drawable name="ban">#80FFFFFF</drawable>
+    <color name="darkgreen">#000</color>
+    <color name="blue">#000</color><!-- 蓝色 -->
+    <color name="common_color_2">#555555</color>
+
+    <color name="glay">#B4B4B4</color>
+    <color name="blove">#ff46bec8</color>
+
+    <color name="theme_color">#3b9beb</color>
+
+
+
+    <color name="colorEditorMore">#f4f4f4</color>
+    <color name="colorEditorBackground">#fff</color>
+
+    <color name="colorText">#444</color>
+
+</resources>

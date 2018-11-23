@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright © 2015 珠海云集软件科技有限公司.
+  ~ Website：http://www.YunJi123.com
+  ~ Mail：dev@yunji123.com
+  ~ Tel：+86-0756-8605060
+  ~ QQ：340022641(dove)
+  ~ Author：dove
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    >
+    <DatePicker
+            android:id="@+id/datePicker"
+            android:datePickerMode="spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"/>
+
+
+</LinearLayout>
+
+    <View  android:visibility="gone"
+        style="@style/Divider.Vertical"/>
+    <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/Time2_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        >
+    <EditText
+        android:id="@+id/Time2"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:hint="时间"
+        android:minHeight="50dp"
+        android:textSize="25dp"
+        android:inputType="number"
+        android:maxLength="2"
+        android:gravity="center"
+        android:textColor="#000"
+        android:digits="0123456789" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:layout_centerVertical="true"
+            android:textColor="#000"
+            android:layout_toRightOf="@+id/Time2"
+            android:text=":00"
+            />
+
+
+
+    </RelativeLayout>
+    <!--  <RadioGroup
+              android:id="@+id/times"
+              android:padding="@dimen/padding_small"
+              android:gravity="center_horizontal"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+          <RadioButton
+                  android:id="@+id/morning"
+                  android:text="@string/lab_morning"
+                  android:padding="@dimen/padding_small"
+                  android:checked="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+
+          <RadioButton
+                  android:id="@+id/afternoon"
+                  android:layout_marginLeft="@dimen/padding_xlarge"
+                  android:layout_marginRight="@dimen/padding_xlarge"
+                  android:text="@string/lab_afternoon"
+                  android:padding="@dimen/padding_small"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+
+          <RadioButton
+                  android:id="@+id/evening"
+                  android:text="@string/lab_evening"
+                  android:padding="@dimen/padding_small"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+      </RadioGroup>-->
+
+</LinearLayout>

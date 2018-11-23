@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "26.0.0"
+    defaultConfig {
+        applicationId "com.admin.huangchuan"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 5
+        versionName '1.0.0.5'
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def oldFile = output.outputFile
+            if (variant.buildType.name.equals('release')) {
+//                println(variant.productFlavors[0].name)
+                def releaseApkName = 'HuangChuanAdmin_' + '_v' + defaultConfig.versionName + '_' + releaseTime() + '.apk'
+                output.outputFile = new File(oldFile.parent, releaseApkName)
+            }
+
+        }
+    }
+    productFlavors {
+    }
+}
+
+def releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+    compile files('libs/lite-orm-1.5.4.jar')
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    compile 'org.simple:androideventbus:latest'
+    compile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    compile files('libs/fastjson-1.2.7.jar')
+    compile 'in.srain.cube:ultra-ptr:1.0.8@aar'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile project(':multi-image-selector')
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+    compile 'com.feezu.liuli:timeselector:1.0.8+'
+    compile project(path: ':cropper')
+    compile project(path: ':imagepicker')
+    compile project(path: ':camera')
+    compile 'com.github.martin90s:ImagePicker:v1.3.2'
+    compile 'com.facebook.fresco:imagepipeline-okhttp3:1.5.0'
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'com.facebook.fresco:fresco:1.5.0'
+    compile 'ren.qinc.edit:lib:0.0.5'
+    compile 'com.vladsch.flexmark:flexmark-formatter:0.28.32'
+    compile files('libs/pgyer_sdk_2.8.0.jar')
+}
